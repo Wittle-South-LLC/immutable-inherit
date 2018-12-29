@@ -1,0 +1,33 @@
+{
+  "name": "immutable-inherit",
+  "version": "0.1.0",
+  "description": "Base object that behaves as immutable but can be extended through inheritance",
+  "main": "dist/ImmutableInherit.js",
+  "scripts": {
+    "build": "babel src —-out-dir /Users/eric/Development/npm/immutable-inherit/dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wittlesouth/immutable-inherit.git"
+  },
+  "keywords": [
+    "Immutable",
+    "Inheritable"
+  ],
+  "author": "Eric Wittle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wittlesouth/immutable-inherit/issues"
+  },
+  "homepage": "https://github.com/wittlesouth/immutable-inherit#readme",
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  }
+}

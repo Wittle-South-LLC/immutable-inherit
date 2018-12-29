@@ -21,21 +21,5 @@ If called without an argument, the data element will be an empty Map.
 Example
 -------
 
-You can extend ImmutableInherit with additional properties, as long you
-ensure that any methods that set value return a new copy of the object.
-So assuming that you might want an immutable object that knows whether it
-is newly created in a client but not persisted. 
-
-class ClientObject extends ImmutableInherit {
-    constructor(createFrom) {
-        super(createFrom)
-        this._new = false
-    }
-    setNew(newVal) {
-        return !this._new === newVal 
-            ? Object.assign(new this.constructor(this._data), {
-                _new: newVal,
-        })
-      : this
-    }
-}
+See the examples directory for demonstrations of how to use and extend
+ImmutableInherit.

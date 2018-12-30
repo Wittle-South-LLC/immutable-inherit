@@ -2,4 +2,7 @@
 src/
 tests/
 examples/
+coverage/
+.nyc_output/
+
 

@@ -1,11 +1,12 @@
 {
   "name": "immutable-inherit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Base object that behaves as immutable but can be extended through inheritance",
   "main": "dist/ImmutableInherit.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "test": "mocha --require @babel/register -- tests"
+    "test": "NODE_ENV=test mocha --require @babel/register -- tests",
+    "cover": "NODE_ENV=test nyc _mocha --require @babel/register -- tests"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,43 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
+    "babel-plugin-istanbul": "^5.1.0",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  },
+  "nyc": {
+    "exclude": [
+      "**/test-*.js",
+      "tests/**",
+      "**/TestUtils.js",
+      "**/TestData.js"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "extension": [
+      ".jsx",
+      ".js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "sourceMap": false,
+    "instrument": false
   }
 }

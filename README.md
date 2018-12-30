@@ -23,3 +23,8 @@ Example
 
 See the examples directory for demonstrations of how to use and extend
 ImmutableInherit.
+
+Changelog
+---------
+* 0.1.0 - Initial publication
+* 0.2.0 - Now with 100% line / branch / statement coverage

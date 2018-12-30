@@ -1,6 +1,6 @@
 /* ImmutableInherit.js - Base object that extends any Immutable object */
 
-import { is, fromJS, Map } from 'immutable'
+import { is, isImmutable, fromJS, Map } from 'immutable'
 
 const MAX_HASH_CODE = 199999999
 
@@ -10,12 +10,12 @@ export default class ImmutableInherit {
     // of whatever we received from the constructor
 
     if (createFrom) {
-      if (typeof createFrom === 'object' || createFrom instanceof Array) {
-        // We received a normal JavaScript object, so let Immutable create an immutable one
-        this._data = fromJS(createFrom)
-      } else if (createFrom.isImmutable && createFrom.isImmutable()) {
+      if (isImmutable(createFrom)) {
         // We received an Immutable object, so use it.
         this._data = createFrom
+      } else if (typeof createFrom === 'object' || createFrom instanceof Array) {
+        // We received a normal JavaScript object, so let Immutable create an immutable one
+        this._data = fromJS(createFrom)
       } else {
         throw new Error('ImmutableInherit constructor called with invalid argument')
       }

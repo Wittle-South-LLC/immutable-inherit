@@ -1,6 +1,6 @@
 {
   "name": "immutable-inherit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Base object that behaves as immutable but can be extended through inheritance",
   "main": "dist/ImmutableInherit.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/wittlesouth/immutable-inherit/issues"
   },
   "homepage": "https://github.com/wittlesouth/immutable-inherit#readme",
-  "dependencies": {
+  "peerDependencies": {
     "immutable": "^4.0.0-rc.12"
   },
   "devDependencies": {
@@ -69,5 +69,8 @@
     ],
     "sourceMap": false,
     "instrument": false
+  },
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
   }
 }

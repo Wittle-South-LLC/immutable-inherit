@@ -28,3 +28,5 @@ Changelog
 ---------
 * 0.1.0 - Initial publication
 * 0.2.0 - Now with 100% line / branch / statement coverage
+* 0.2.1 - Made Immutable a peer dependency
+* 0.2.2 - Updated GitHub links after correcting repository ownership

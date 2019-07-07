@@ -6,6 +6,7 @@ pipeline {
         NODE_ENV = 'test'
       }
       steps {
+        sh "npm config set unsafe-perm=true"
         sh "npm install"
         sh "npm run build"
         sh "npm test"

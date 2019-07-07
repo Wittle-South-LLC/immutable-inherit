@@ -3,7 +3,7 @@
 import { describe, it } from 'mocha'
 import { is, Map, List } from 'immutable'
 import chai from 'chai'
-import ImmutableInherit from '../src/ImmutableInherit'
+import ImmutableInherit from '../dist/ImmutableInherit'
 import BasicInheritance from '../examples/BasicInheritance'
 import MultipleInheritance from '../examples/MultipleInheritance'
 

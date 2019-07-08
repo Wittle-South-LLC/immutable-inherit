@@ -1,6 +1,6 @@
 {
   "name": "immutable-inherit",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Base object that behaves as immutable but can be extended through inheritance",
   "main": "dist/ImmutableInherit.js",
   "scripts": {
@@ -72,5 +72,8 @@
   },
   "dependencies": {
     "immutable": "^4.0.0-rc.12"
+  },
+  "publishConfig": {
+    "registry": "https://npm.wittlesouth.com"
   }
 }
